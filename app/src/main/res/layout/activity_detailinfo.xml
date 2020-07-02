@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detailinfo">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageButton
+            android:id="@+id/share"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_redirect"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab1"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:icon="@drawable/ic_information_variant_selected"
+            android:text="PRODUCT"
+            android:textColor="#6076D8">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab2"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:icon="@drawable/ic_seller"
+            android:text="SELLER INFO"
+            android:textColor="#6076D8">
+
+        </com.google.android.material.tabs.TabItem>
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab3"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="SHIPPING"
+            android:icon="@drawable/ic_truck_delivery_selected"
+            android:textColor="#6076D8">
+        </com.google.android.material.tabs.TabItem>
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/todetail1"
+        android:layout_width="434dp"
+        android:layout_height="846dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="69dp"
+        android:background="#FFFFFF"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="72dp"
+            android:layout_height="76dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="169dp"
+            android:layout_marginTop="300dp" />
+
+        <TextView
+            android:layout_width="184dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="380dp"
+            android:text="Searching Products.." />
+
+
+    </RelativeLayout>
+</FrameLayout>
